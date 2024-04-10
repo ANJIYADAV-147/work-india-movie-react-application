@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
+import HomePage from './components/HomePage';
+import TopRatedPage from './components/TopRatedPage';
+import UpcomingPage from './components/UpcomingPage';
+import MovieDetails from './components/MovieDetails';
+import SearchResults from './components/SearchResults';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App=()=>(
+  <BrowserRouter>
+  <Routes>
+    <Route exact path='/movies' element={<HomePage />} />
+    <Route exact path="/movies/:id" element={<MovieDetails/>}/>
+    <Route exact path='/top-rated' element={<TopRatedPage/>}/>
+    <Route exact path='/upcoming' element={<UpcomingPage/>}/>
+    <Route exact path='/search-results' element={<SearchResults/>}/>
+    </Routes>
+  </BrowserRouter>
+)
 
 export default App;
