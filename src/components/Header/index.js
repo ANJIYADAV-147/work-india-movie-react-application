@@ -5,14 +5,14 @@ import './index.css'
 const Header=()=>(
     <>
             <nav className='header-container'>
-            <Link className='link-item' to='/movies'>
+            <Link className='link-item' to='/'>
             <div className='icon-container'>
                 <img src='https://www.highreshdwallpapers.com/wp-content/uploads/2014/03/The-Movies-Wallpaper.jpg' className='movie-icon' alt='icon'/>
                 <h1 className='heading'>MovieDb</h1>
             </div>
             </Link>
             <div className='topRated-search-container'>
-                <Link className='link' to='/movies'>
+                <Link className='link' to='/'>
                 <p className='page-name'>Popular</p>
                 </Link>
                 <Link className='link' to='/top-rated'>
